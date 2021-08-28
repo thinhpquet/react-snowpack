@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from "react";
 
 function App() {
-  // Create the count state.
   const [count, setCount] = useState(0);
-  // Update the count (+1 every second).
+  console.log(__SNOWPACK_ENV__);
+
   useEffect(() => {
     const timer = setTimeout(() => setCount(count + 1), 1000);
     return () => clearTimeout(timer);
-  }, [count, setCount]);
-  // Return the App component.
+  }, [count]);
+
   return (
     <div className="App">
       <header className="App-header">
